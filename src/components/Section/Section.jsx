@@ -1,10 +1,15 @@
-import React from "react";
-import { useState } from "react";
+import React, { Component } from "react";
+import { useState, useEffect, useContext, createContext } from "react";
 import PropTypes from "prop-types";
 import { Feedback } from "components/Feedback/Feedback";
 import { Statistic } from "components/Statistic/Statistic";
 import { Notification } from "components/Notification/Notification";
 import Css from "./Section.module.css";
+
+/*
+export const StatisticContext = createContext();
+export const UseStatistic = () => useContext(StatisticContext);
+*/
 
 export const Section = () =>
 {
@@ -44,6 +49,14 @@ export const Section = () =>
     {
         setPercentageValue(100 * goodValue / ((goodValue + neutralValue + badValue) + 1));
     };
+/*
+    <StatisticContext.Provider
+        value={{ goodValue, neutralValue, badValue, totalValue, percentageValue,
+                 goodStatistic, neutralStatistic, badStatistic,
+                 totalValueStatistic, percentageValueStatistic }}>
+            {children}
+    </StatisticContext.Provider>
+*/
     return (
         <div>
             <h1 className={Css.feedback__title}>{title}</h1>
