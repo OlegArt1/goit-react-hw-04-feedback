@@ -1,5 +1,5 @@
 import React from "react";
-import { useState, useEffect, useContext, createContext } from "react";
+import { useState } from "react";
 import PropTypes from "prop-types";
 import { Feedback } from "components/Feedback/Feedback";
 import { Statistic } from "components/Statistic/Statistic";
