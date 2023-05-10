@@ -18,7 +18,6 @@ export const Section = () =>
     const [ badValue, setBadValue ] = useState(0);
     const [ totalValue, setTotalValue ] = useState(0);
     const [ percentageValue, setPercentageValue ] = useState(0);
-    const [ title, setTitle ] = useState('Please leave feedback');
 
     const onLeaveFeedback = (value) =>
     {
@@ -59,7 +58,7 @@ export const Section = () =>
 */
     return (
         <div>
-            <h1 className={Css.feedback__title}>{title}</h1>
+            <h1 className={Css.feedback__title}>Please leave feedback</h1>
             <Feedback onClick={onLeaveFeedback}/>
             {goodValue > 0 || neutralValue > 0 || badValue > 0 || totalValue > 0 || percentageValue > 0 ?
             <div className={Css.feedback__block}>
